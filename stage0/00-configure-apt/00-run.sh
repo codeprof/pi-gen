@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+#EDIT:
+install -m 644 files/pdiffs /etc/apt/apt.conf.d/70debconf
+
 install -m 644 files/sources.list ${ROOTFS_DIR}/etc/apt/
 install -m 644 files/raspi.list ${ROOTFS_DIR}/etc/apt/sources.list.d/
 
