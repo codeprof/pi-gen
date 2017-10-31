@@ -53,4 +53,14 @@
 # Additional overlays and parameters are documented /boot/overlays/README
 
 # Enable audio (loads snd_bcm2835)
-dtparam=audio=on
+dtparam=audio=off
+
+#LCD
+max_usb_current=1
+hdmi_group=2
+hdmi_mode=87
+hdmi_cvt 1024 600 60 6 0 0 0
+hdmi_drive=1
+display_rotate=2
+enable_uart=0
+gpu_mem=32

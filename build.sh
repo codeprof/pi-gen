@@ -19,7 +19,7 @@ EOF
 			PACKAGES="$(sed -f "${SCRIPT_DIR}/remove-comments.sed" < ${i}-packages-nr)"
 			if [ -n "$PACKAGES" ]; then
 				on_chroot << EOF
-apt-get install --no-install-recommends -y $PACKAGES
+apt-get install --allow-unauthenticated --no-install-recommends -y $PACKAGES
 EOF
 			fi
 			log "End ${SUB_STAGE_DIR}/${i}-packages-nr"
@@ -29,7 +29,7 @@ EOF
 			PACKAGES="$(sed -f "${SCRIPT_DIR}/remove-comments.sed" < ${i}-packages)"
 			if [ -n "$PACKAGES" ]; then
 				on_chroot << EOF
-apt-get install -y $PACKAGES
+apt-get install --allow-unauthenticated -y $PACKAGES
 EOF
 			fi
 			log "End ${SUB_STAGE_DIR}/${i}-packages"
