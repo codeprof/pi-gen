@@ -1,0 +1,5 @@
+wpasupplicant wireless-tools firmware-brcm80211 firmware-realtek
+raspberrypi-net-mods
+net-tools
+iptables
+fail2ban
